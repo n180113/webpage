@@ -1,0 +1,356 @@
+header{
+    color: white;
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100%;
+    background-color:blue;
+    height: 80px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.logo{
+    height:80px;
+    width: 80px;
+    margin-left: 10px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.details{
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    top:15px;
+    font-weight: bold;
+    
+}
+.h2{
+    position: absolute;
+    top:10px;
+    left: 40%;
+}
+span{
+    display: inline-block;
+    position: absolute;
+    font-size: 40px;
+    top:0px;
+    right: 15px;
+    cursor: pointer;
+}
+.fa-hourglass{
+    transform: rotate(90deg);
+}
+.navbar,.navbar1{
+    position: fixed;
+    background-color:lightgreen;
+    color: white;
+    z-index: 1;
+    box-shadow: 0px 0px 110px 0px rgba(0,0,0,0.5);
+}
+.sub-list1,.sub-list2{
+    position:absolute;
+    margin-left: -80px;
+    margin-top:20px;
+    text-align: center;
+    background-color:forestgreen;
+    width: 179px;
+     /* display: none;  */
+}
+.sub-list21{
+    position:absolute;
+    width: 179px;
+    padding-left: 30px;
+    margin-left: 120px;
+    margin-top:-20px;
+    background-color: darkmagenta;
+
+    /* display: none; */
+}
+.sub-list1 li,.sub-list2 li{
+    list-style-type: none;
+    margin-left: -60px;
+    font-weight:lighter;
+    height: 50px;
+}
+/* nav .li:hover > .sub-list1,.li:hover > .sub-list2,.li li:hover .sub-list21{
+    display: block;
+} */
+#nav{
+    width: 100px;
+    height: 198px;
+    right: 0;
+}
+.item{
+    color: aliceblue;
+}
+.nav-items1 .li{
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    margin-left: -32px;
+    right: 0px;
+    left: 0px;
+    font-size: 23px;
+    height: 50px;
+    
+}
+.navbar1 ul ul{
+    font-size: small;
+    text-align: left;
+    width: 120px;
+    margin-left: -120px;
+}
+.nav-items .li{
+    position: relative;
+    top: -8px;
+    list-style-type: none;
+    display: inline-block;
+    font-weight:lighter;
+    font-size: 20px;
+    height: 50px;
+}
+.nav-items .li:hover,.nav-items1 .li:hover{
+    background-color:purple;
+    
+}
+
+.main{  
+    height: 78vh;
+    display: flex;
+    flex-direction: row;
+}
+.filter{  
+    position: relative; 
+    overflow-y: scroll; 
+    width: 25%;
+    background-color:lightseagreens;
+}
+.slideshow{
+    margin: 0;
+    padding: 0;
+    height: 76vh;
+    align-items: center;
+    width: 50%;
+}
+.transparent{
+    height: 76vh;
+    width: 50%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+}
+.slider{     
+    overflow: hidden;
+    animation: slider 10s linear infinite; 
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 100%;
+    transition: 2s;
+}
+.navigation-manual{
+    position: absolute;
+    width: 50%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.slide img{
+    
+    height: 600px;
+}
+.manual-btn{
+    border: 1px solid skyblue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 10%;
+}
+.manual-btn:hover{
+    background-color: skyblue;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -100%;
+}
+#radio3:checked ~ .first{
+    margin-left: -200%;
+}
+#radio4:checked ~ .first{
+    margin-left: -300%;
+}
+.slides{
+    top:0;
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 76vh;
+    display: flex;
+}
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+
+}
+.navigation-auto div{
+    border: 2px solid skyblue;
+    padding:5px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: skyblue;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: skyblue;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: skyblue;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: skyblue;
+}
+.notify{     
+    width: 25%;
+}
+
+footer{
+        height: 5vh;
+        background-color:black;
+        position: relative;
+        text-align: center;
+        color: white;
+        bottom: 0;
+    }
+@media only screen and (max-width:1300px),(min-width:900px){
+    .nav-items .li,.sub-list1 li,.sub-list2 li{          
+        padding-left: 180px;
+        padding-right: 80px;  
+    }
+    .main{
+        
+        height: 86vh;
+    }
+    .navbar{
+        height: 50px;
+    }
+}
+@media only screen and (max-width:900px),(min-width:768px){
+    .nav-items .li,.sub-list1 li,.sub-list2 li{       
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .main{
+        height: 76vh;
+    }
+    .navbar{
+        height: 50px;
+    }
+}
+@media only screen and (max-width:768px){
+    header{
+        box-shadow: 0px 10px 80px 10px pink;
+        font-size: small;
+    } 
+    .navbar{
+        height: 0;
+        width: 0;
+    }
+    .main,.slider{
+        height: 82vh;
+        top:-5px;
+        
+    }
+    .transparent{
+        height: 82vh;
+    }
+    .h2{
+        top:20px;
+        left: 55%;
+    }
+    .nav-items{
+        display: none;
+    }
+    #nav{
+        top: 90px;
+        height: 203px;
+        box-shadow: 0px 10px 80px 10px pink;
+    }
+    .nav-items1 .li{
+        top:2px;
+    }
+    footer{
+        top:-5px;
+    }
+    
+}
+.notify-list{
+     width: 100%;
+    color: black;
+    
+}
+.notify-list li{
+    padding-top:25px;
+    height: 73px;
+    text-align: center;
+    list-style-type: none;
+    margin-left: -32px;
+    /* padding: 10px; */
+    font-weight: bold;
+    background-color: deepskyblue;
+    border-bottom: 1px solid black;
+    
+}
+.notify-list li:hover{
+    color: darkblue;
+    background-color:palegreen;
+}
+.filter ul li{
+    list-style-type: none;
+}
+.filter .input input{
+    margin: 3%;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    border-bottom:2px solid black;
+}
+.filter .input input:focus{
+    outline: none;
+}
+.filter ul li{
+    background-color: lightseagreen;
+    margin-left: -35px;
+    padding: 10px;
+    padding-left: 45px;
+    color: white;
+}
+.filter button{
+    border:none;
+    background-color:skyblue;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    color: black;
+}
+.filter ul li button{
+    position: relative;
+    left:80px;
+    border: none;
+    color:black;
+
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+}
